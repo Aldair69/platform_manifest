@@ -63,6 +63,7 @@
   <remove-project name="device/google/akita-kernels/5.15" /> 
   <remove-project name="device/google/zuma" />
   <remove-project name="device/google/zuma-sepolicy" />
+  <remove-project name="platform/cts" />
   <remove-project name="platform/bootable/recovery" />
   <remove-project name="platform/bionic" />
   <remove-project name="platform/build" />
@@ -70,8 +71,11 @@
   <remove-project name="platform/frameworks/base" />
   <remove-project name="platform/frameworks/native" />
   <remove-project name="platform/system/core" />
+  <remove-project name="platform/system/tools/aidl" />
+  <remove-project name="platform/prebuilts/abi-dumps/ndk" />
 
   <!-- hentaiOSのスタート -->
+  <project path="cts" name="platform_cts" groups="cts,pdk-cw-fs,pdk-fs" remote="gerrit/hentaiOS" clone-depth="1" />
   <project path="bionic" name="platform_bionic" groups="pdk" remote="github/hentaiOS" />
   <project path="build/make" name="platform_build" groups="pdk" remote="github/hentaiOS" >
     <copyfile src="core/root.mk" dest="Makefile" />
@@ -91,6 +95,7 @@
   <project path="frameworks/base" name="platform_frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="gerrit/hentaiOS" />
   <project path="frameworks/native" name="platform_frameworks_native" groups="pdk" remote="github/hentaiOS" />
   <project path="system/core" name="platform_system_core" groups="pdk" remote="github/hentaiOS" />
+  <project path="system/tools/aidl" name="platform_system_tools_aidl" groups="pdk" remote="github/hentaiOS" />
   <project path="packages/apps/helluvaUpdater" name="platform_packages_apps_helluvaUpdater" groups="pdk-fs" remote="github/hentaiOS" />
   <project path="vendor/codeaurora/telephony" name="platform_vendor_codeaurora_telephony" groups="vendor" remote="github/hentaiOS" />
   <project path="vendor/gms" name="platform_vendor_gms" groups="vendor" remote="gitlab/hentaiOS" clone-depth="1" />
@@ -99,6 +104,7 @@
   <project path="vendor/qcom/opensource/dataservices" name="platform_vendor_qcom_opensource_dataservices" groups="vendor" remote="github/hentaiOS" />
   <project path="vendor/qcom/opensource/interfaces" name="platform_vendor_qcom_opensource_interfaces" groups="vendor" remote="github/hentaiOS" />
   <project path="vendor/qcom/opensource/power" name="platform_vendor_qcom_opensource_power" groups="vendor" remote="github/hentaiOS" />
+  <project path="prebuilts/abi-dumps/ndk" name="platform_prebuilts_abi-dumps_ndk" groups="vendor" remote="github/hentaiOS" />
 
   <!-- Additions from LineageOS -->
   <project path="prebuilts/extract-tools" name="android_prebuilts_extract-tools" remote="github/LineageOS" />
